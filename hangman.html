@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeutschApp - Galgenmännchen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-bar"></div>
+    <div class="tech-pattern"></div>
+    <header>
+        <nav>
+            <div class="logo">DEUTSCHAPP</div>
+            <div class="nav-links">
+                <a href="index.html">Startseite</a>
+                <a href="index.html#features">Funktionen</a>
+                <a href="index.html#projects">Projekte</a>
+                <a href="index.html#about">Über uns</a>
+                <a href="index.html#contact">Kontakt</a>
+                <a href="index.html#ubung">Übung</a>
+                <a href="hangman.html" class="game-btn active">Spiel</a>
+            </div>
+            <div class="language-selector">
+                <button onclick="changeLanguage('tr')" class="lang-btn">
+                    <img src="https://flagcdn.com/w40/tr.png" alt="Türkçe" title="Türkçe">
+                </button>
+                <button onclick="changeLanguage('en')" class="lang-btn">
+                    <img src="https://flagcdn.com/w40/us.png" alt="English" title="English">
+                </button>
+                <button onclick="changeLanguage('de')" class="lang-btn">
+                    <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" title="Deutsch">
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hangman-section">
+            <div class="hangman-container">
+                <h2>Galgenmännchen</h2>
+                <div class="game-info">
+                    <div class="word-info">
+                        <h3>Wort:</h3>
+                        <div class="word-display" id="word-display"></div>
+                    </div>
+                    <div class="hints">
+                        <h3>Hinweise:</h3>
+                        <p id="hint1"></p>
+                        <p id="hint2"></p>
+                    </div>
+                </div>
+                <div class="hangman-drawing">
+                    <div class="gallows">
+                        <div class="rope"></div>
+                        <div class="head"></div>
+                        <div class="body"></div>
+                        <div class="left-arm"></div>
+                        <div class="right-arm"></div>
+                        <div class="left-leg"></div>
+                        <div class="right-leg"></div>
+                    </div>
+                </div>
+                <div class="keyboard" id="keyboard"></div>
+                <div class="game-controls">
+                    <button id="new-game" class="primary-btn">Neues Spiel</button>
+                    <button id="give-up" class="secondary-btn">Aufgeben</button>
+                </div>
+                <div class="game-stats">
+                    <p>Verbleibende Versuche: <span id="remaining-guesses">10</span></p>
+                    <p>Punktzahl: <span id="score">0</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DeutschApp</h3>
+                <p>Der einfachste Weg, Deutsch zu lernen</p>
+            </div>
+            <div class="footer-section">
+                <h3>Schnelllinks</h3>
+                <a href="index.html">Startseite</a>
+                <a href="index.html#projects">Projekte</a>
+                <a href="index.html#about">Über uns</a>
+                <a href="index.html#contact">Kontakt</a>
+            </div>
+            <div class="footer-section">
+                <h3>Soziale Medien</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DeutschApp. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="hangman.js"></script>
+</body>
+</html> 

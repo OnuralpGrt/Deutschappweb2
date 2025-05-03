@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeutschApp - Übungstest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">DEUTSCHAPP</a>
+            <div class="nav-links">
+                <a href="index.html" data-translate="nav-home">Startseite</a>
+                <a href="index.html#features" data-translate="nav-features">Funktionen</a>
+                <a href="index.html#projects" data-translate="nav-projects">Projekte</a>
+                <a href="index.html#about" data-translate="nav-about">Über uns</a>
+                <a href="index.html#contact" data-translate="nav-contact">Kontakt</a>
+                <a href="ubung.html" data-translate="nav-ubung">Übung</a>
+                <a href="hangman.html" data-translate="nav-game">Spiel</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" data-lang="tr"><img src="https://flagcdn.com/w40/tr.png" alt="Türkçe"></button>
+                <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="English"></button>
+                <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" alt="Deutsch"></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="ubung" class="ubung-section">
+            <div class="ubung-container">
+                <div class="ubung-header">
+                    <h2>Deutschtest</h2>
+                    <p>Für Fortgeschrittene</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="score-display" id="score-display"></div>
+                <div id="questions-container">
+                    <!-- Sorular JavaScript ile eklenecek -->
+                </div>
+                <div class="ubung-controls">
+                    <button class="ubung-btn" id="prev-btn" disabled>Vorherige Frage</button>
+                    <button class="ubung-btn" id="next-btn">Nächste Frage</button>
+                    <button class="ubung-btn" id="submit-btn" style="display: none;">Ergebnisse anzeigen</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DeutschApp</h3>
+                <p data-translate="footer-desc">Der einfachste Weg, Deutsch zu lernen</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer-links">Schnellzugriff</h3>
+                <a href="index.html" data-translate="footer-home">Startseite</a>
+                <a href="index.html#projects" data-translate="footer-projects">Projekte</a>
+                <a href="index.html#about" data-translate="footer-about">Über uns</a>
+                <a href="index.html#contact" data-translate="footer-contact">Kontakt</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-translate="footer-social">Soziale Medien</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer-text">&copy; 2024 DeutschApp. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
