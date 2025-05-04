@@ -507,17 +507,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobil menü işlevselliği
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    const mobileMenu = document.querySelector('.mobile-menu');
     
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('active');
         });
-        
         // Menü dışına tıklandığında menüyü kapat
         document.addEventListener('click', function(event) {
-            if (!event.target.closest('.nav-links') && !event.target.closest('.mobile-menu-btn')) {
-                navLinks.classList.remove('active');
+            if (!event.target.closest('.mobile-menu') && !event.target.closest('.mobile-menu-btn')) {
+                mobileMenu.classList.remove('active');
             }
         });
     }
