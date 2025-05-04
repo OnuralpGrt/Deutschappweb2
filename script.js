@@ -504,4 +504,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedLang) {
         changeLanguage(savedLang);
     }
+
+    // Mobil menü işlevselliği
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Menü dışına tıklandığında menüyü kapat
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-links') && !event.target.closest('.mobile-menu-btn')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    }
 }); 
